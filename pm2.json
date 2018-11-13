@@ -1,0 +1,40 @@
+{
+    "apps": [{
+            "name": "tipApi",
+            "script": "./public/index.js",
+            "cwd": "./",
+            "watch": false,
+            "watch_options": {
+                "usePolling": true
+            },
+            "ignore_watch": [
+                "crond",
+                "storage",
+                "node_modules",
+                "public/static"
+            ],
+            "error_file": "storage/logs/app-err.log",
+            "out_file": "storage/logs/app-out.log",
+            "log_date_format": "YYYY-MM-DD HH:mm Z"
+        },
+        {
+            "name": "tipWs",
+            "script": "./crond/websocket_server.js",
+            "cwd": "./",
+            "watch": false,
+            "watch_options": {
+                "usePolling": true
+            },
+            "ignore_watch": [
+                "app",
+                "config",
+                "node_modules",
+                "storage",
+                "public"
+            ],
+            "error_file": "storage/logs/app-err-ws.log",
+            "out_file": "storage/logs/app-out-ws.log",
+            "log_date_format": "YYYY-MM-DD HH:mm Z"
+        }
+    ]
+}

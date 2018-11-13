@@ -1,0 +1,7 @@
+/node_modules/
+/public/static/images/
+/public/static/upload/
+/.vscode/
+/storage/logs/
+/storage/cache/msgCache/
+/storage/cache/recordCache/
