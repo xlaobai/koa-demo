@@ -22,8 +22,8 @@ const koaBady = require('koa-body');            //解析formdata
 const static = require('koa-static');           //static静态文件目录，用于直接连接css,js,img
 const views = require('koa-views');             //view视图中间件,引入ejs模板渲染
 const logger = require('koa-logger');           //日志中间件
-const helmet = require('koa-helmet');
-const session = require('koa-session');
+const helmet = require('koa-helmet');           //安全策略
+const session = require('koa-session');         //session会话
 app.use(koaBady({multipart : true}))
     .use(static(`${__dirname}/static`))
     .use(views(`${config.vie}`, {
